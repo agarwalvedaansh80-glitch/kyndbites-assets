@@ -10,10 +10,11 @@ h1{font-size:clamp(2.9rem,8vw,6.4rem);font-weight:800}
 h1 em{font-style:italic;color:var(--gold);font-weight:600}
 h2{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;margin-bottom:1rem}
 a{color:inherit;text-decoration:none}
-.cursor{position:fixed;top:0;left:0;width:30px;height:30px;border-radius:50%;pointer-events:none;z-index:9999;display:none;will-change:transform;border:1.5px solid rgba(74,31,87,.75);background:rgba(242,169,59,.14);transition:width .25s var(--ease),height .25s var(--ease),background .25s,border-color .25s}
+.cursor{position:fixed;top:0;left:0;width:44px;height:44px;border-radius:50%;pointer-events:none;z-index:9999;display:none;will-change:transform;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.55),rgba(255,255,255,.08) 55%,rgba(255,255,255,0) 72%);backdrop-filter:blur(6px) saturate(1.5) brightness(1.06);-webkit-backdrop-filter:blur(6px) saturate(1.5) brightness(1.06);border:1px solid rgba(255,255,255,.75);box-shadow:inset 0 -5px 10px rgba(255,255,255,.25),inset 0 3px 6px rgba(255,255,255,.6),0 8px 22px -8px rgba(42,22,49,.35);transition:width .3s var(--ease),height .3s var(--ease)}
+.cursor::after{content:"";position:absolute;left:22%;top:14%;width:34%;height:22%;border-radius:50%;background:rgba(255,255,255,.8);filter:blur(1.5px)}
 .cursor-dot{display:none!important}
 @media(hover:hover) and (pointer:fine){.cursor{display:block}}
-.cursor.hover{width:64px;height:64px;background:rgba(242,169,59,.28);border-color:rgba(74,31,87,.35)}
+.cursor.hover{width:84px;height:84px}
 @keyframes wobble{50%{border-radius:54% 46% 48% 52%/52% 54% 46% 48%}}
 .loader{position:fixed;inset:0;background:var(--purple);z-index:10000;display:grid;place-items:center;color:var(--cream);animation:loaderOut .9s 1.5s cubic-bezier(.77,0,.18,1) forwards}
 .loader-in{font-family:Fraunces,serif;font-size:clamp(2.6rem,9vw,6.5rem);font-weight:800;line-height:1;display:flex;gap:.25em;overflow:hidden}
@@ -191,3 +192,6 @@ footer strong{color:#fff}footer a{color:var(--gold)}footer img{border-radius:50%
 .three-stage.cracked .hint3d{opacity:0}
 .three-stage.cracked{animation:shake .5s}
 @keyframes shake{20%{transform:translate(-4px,2px)}40%{transform:translate(4px,-3px)}60%{transform:translate(-3px,-2px)}80%{transform:translate(2px,3px)}}
+
+.quotes-grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.quotes-grid{grid-template-columns:1fr}}
