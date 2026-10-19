@@ -9,7 +9,7 @@ function init(){
   const scene=new T.Scene();const cam=new T.PerspectiveCamera(30,1,.1,50);cam.position.set(0,.4,8.6);cam.lookAt(0,0,0);
   scene.add(new T.AmbientLight(0xfff1dd,1.1));const key=new T.DirectionalLight(0xffe2b0,.9);key.position.set(3,6,4);scene.add(key);
   const group=new T.Group();scene.add(group);
-  const L=new T.TextureLoader();const tex=L.load((document.querySelector('link[rel=icon]')||{}).href?document.querySelector('link[rel=icon]').href.replace('profile.jpg','brittle-top.png'):'brittle-top.png');tex.encoding=T.sRGBEncoding;
+  const L=new T.TextureLoader();const tex=L.load('brittle-top.png');tex.encoding=T.sRGBEncoding;
   const N=6,LAYERS=7,TH=.05,parts=[];
   for(let i=0;i<N;i++){
     const g=new T.Group();g.userData.home=new T.Vector3();g.userData.rot=new T.Euler();
